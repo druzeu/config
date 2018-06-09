@@ -16,7 +16,7 @@
 OLDIP_FILE="/tmp/ip.tmpfile"
 ## this is from within an instance, just returns instance public IP
 ## See http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-instance-addressing for details
-CHECK_CMD="curl ipinfo.io/ip"
+CHECK_CMD="curl -s ipinfo.io/ip"
 ## Find this at http://freedns.afraid.org/dynamic/
 DIRECT_URL="http://freedns.afraid.org/dynamic/update.php?c1htb0Jja1p1emdxVUNJRm4zODZCRkU1OjE3NjA3ODc2"
 UPDATE_COMMAND="/usr/bin/curl -s $DIRECT_URL"
@@ -36,7 +36,6 @@ if [ "${CURRENTIP}" != "${OLDIP}" ] ; then
 echo "Issuing update command"
 ${UPDATE_COMMAND}
 fi
-${UPDATE_COMMAND}
 
 echo "Saving IP"
 echo "${CURRENTIP}" > "${OLDIP_FILE}"
