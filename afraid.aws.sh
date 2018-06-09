@@ -9,7 +9,8 @@
 ## THEN, it doesn't hurt to do the following (change permissions)
 ## chmod 500 /etc/cron.d/afraid.aws.sh
 ## sudo chown root.root /etc/cron.d/afraid.aws.sh
-## NEXT, move this file to /etc/cron.d, 
+## NEXT, move this file to /etc/cron.d and /usr/local/bin/afraid.aws.sh
+## Add /usr/local/bin/afraid.aws.sh to /etc/rc.local for the script to be called on system startup.
 ## FINALLY, add the following line to /etc/crontab
 ## */2 * * * * root /etc/cron.d/afraid.aws.sh >/dev/null
 
