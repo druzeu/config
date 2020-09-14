@@ -19,7 +19,7 @@ OLDIP_FILE="/tmp/ip.tmpfile"
 ## See http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-instance-addressing for details
 CHECK_CMD="curl -s ipinfo.io/ip"
 ## Find this at http://freedns.afraid.org/dynamic/
-DIRECT_URL="http://freedns.afraid.org/dynamic/update.php?c1htb0Jja1p1emdxVUNJRm4zODZCRkU1OjE3NjA3ODc2"
+DIRECT_URL="http://freedns.afraid.org/dynamic/update.php?c1htb0Jja1p1emdxVUNJRm4zODZCRkU1OjE3NjA4NDEx"
 UPDATE_COMMAND="/usr/bin/curl -s $DIRECT_URL"
 
 echo "Getting current IP"
